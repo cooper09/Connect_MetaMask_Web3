@@ -17,7 +17,7 @@ function App() {
 
     // ❌ Check if Meta Mask Extension exists 
     if(window.ethereum) {
-      console.log('detected');
+      console.log('wallet detected');
 
       try {
         const accounts = await window.ethereum.request({
@@ -25,7 +25,7 @@ function App() {
         });
         setWalletAddress(accounts[0]);
       } catch (error) {
-        console.log('Error connecting...');
+        console.log('Error connecting: ', error.message);
       }
 
     } else {
@@ -49,7 +49,7 @@ function App() {
         
         onClick={requestAccount}
         
-        >Request Account</button>
+        >Connect Account</button>
         <h3>Wallet Address: {walletAddress}</h3>
       </header>
     </div>

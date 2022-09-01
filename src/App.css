@@ -38,10 +38,11 @@
 }
 
 button {
-  font-size: 36px;
+  font-size: 24px;
   padding: 16px;
   border-radius: 16px;
-  background-color: red;
+  background-color: blue;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
